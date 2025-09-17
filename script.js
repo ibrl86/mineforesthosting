@@ -66,4 +66,5 @@ function activatePlan(planName) {
             document.getElementById("server-ip").innerText = "play.mineforest.com";
             document.getElementById("server-port").innerText = "25565";
         });
+
 }
