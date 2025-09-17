@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MineForest Hosting 🌲</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🌲 MineForest Hosting 🌲</h1>
+    <nav>
+      <a href="#acasa">Acasă</a>
+      <a href="#planuri">Planuri</a>
+      <a href="#login">Login</a>
+      <a href="#register">Register</a>
+    </nav>
+  </header>
+
+  <section id="acasa">
+    <h2>Bine ai venit la MineForest Hosting!</h2>
+    <p>Toate serverele de Minecraft sunt <b>gratuite</b>. Alege un plan și primești IP-ul direct în dashboard! 🚀</p>
+  </section>
+
+  <section id="planuri">
+    <h2>Planuri gratuite</h2>
+    <div class="planuri">
+      <div class="plan">
+        <div class="plan-icon">🌱</div>
+        <h3>Starter</h3>
+        <p>1 GB RAM • 10 sloturi</p>
+        <button onclick="activatePlan('Starter 1GB')">Ia-l gratuit</button>
+      </div>
+      <div class="plan">
+        <div class="plan-icon">🌳</div>
+        <h3>Advanced</h3>
+        <p>10 GB RAM • 50 sloturi</p>
+        <button onclick="activatePlan('Advanced 10GB')">Ia-l gratuit</button>
+      </div>
+      <div class="plan">
+        <div class="plan-icon">🏰</div>
+        <h3>Ultra</h3>
+        <p>30 GB RAM • 200 sloturi</p>
+        <button onclick="activatePlan('Ultra 30GB')">Ia-l gratuit</button>
+      </div>
+      <div class="plan">
+        <div class="plan-icon">🌟</div>
+        <h3>Mega</h3>
+        <p>90 GB RAM • 500 sloturi</p>
+        <button onclick="activatePlan('Mega 90GB')">Ia-l gratuit</button>
+      </div>
+    </div>
+    <p><b>⚠️ Trebuie să fii logat pentru a activa un plan.</b></p>
+  </section>
+
+  <section id="login">
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="email" id="login-email" placeholder="Email" required>
+      <input type="password" id="login-password" placeholder="Parola" required>
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <section id="register">
+    <h2>Register</h2>
+    <form id="register-form">
+      <input type="email" id="register-email" placeholder="Email" required>
+      <input type="password" id="register-password" placeholder="Parola" required>
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MineForest Hosting 🌲 – Toate serverele sunt gratuite</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+/* ===== Reset general ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Verdana', sans-serif;
+}
+
+body {
+    background-color: #1e272e; /* fundal întunecat */
+    color: #d2dae2; /* text deschis */
+    line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #2f3640;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #00b894; /* verde Minecraft */
+}
+
+header h1 {
+    font-family: 'Courier New', monospace;
+    font-size: 2rem;
+    color: #00b894;
+    text-shadow: 4px 4px #000; /* efect bloc */
+}
+
+nav a {
+    margin: 0 15px;
+    color: #d2dae2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #00b894;
+}
+
+/* ===== Sections ===== */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ===== Planuri ===== */
+.planuri {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.plan {
+    background: linear-gradient(145deg, #3a3f4d, #2f3640);
+    border: 3px solid #00b894;
+    border-radius: 8px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 4px 4px 0 #000; /* efect bloc Minecraft */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.plan:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 0 #000;
+}
+
+.plan h3 {
+    color: #00b894;
+    margin-bottom: 10px;
+    font-family: 'Courier New', monospace;
+}
+
+.plan p {
+    margin-bottom: 10px;
+}
+
+/* Iconițe plan */
+.plan-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #000;
+}
+
+/* Butoane plan */
+.plan button {
+    background-color: #00b894;
+    border: 2px solid #000;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.plan button:hover {
+    background-color: #019875;
+    transform: translateY(-2px);
+}
+
+/* ===== Forms ===== */
+form {
+    background-color: #2f3640;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 2px solid #00b894;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #00b894;
+    background-color: #353b48;
+    color: #d2dae2;
+}
+
+button {
+    width: 100%;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2f3640;
+    border-top: 4px solid #00b894;
+    margin-top: 40px;
+}
+
+/* ===== Dashboard ===== */
+#server-info {
+    background-color: #353b48;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #00b894;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#logout-btn {
+    padding: 10px 20px;
+    background-color: #e84118;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    margin: 20px auto;
+}
+
+#logout-btn:hover {
+    background-color: #c23616;
+}
+
+/* ===== Alte efecte ===== */
+#planuri {
+    background-color: #1f252d;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
