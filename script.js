@@ -1,4 +1,4 @@
-// ⚡ Config Firebase (înlocuiește cu config-ul tău)
+// ⚡ Config Firebase
 const firebaseConfig = {
     apiKey: "API_KEY",
     authDomain: "PROJECT_ID.firebaseapp.com",
@@ -12,59 +12,56 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
 
+// Helper pentru mesaje
+function showMessage(id, text, color="green") {
+    const el = document.getElementById(id);
+    if(el) {
+        el.innerText = text;
+        el.style.color = color;
+    }
+}
+
 // Register
-document.getElementById("register-form")?.addEventListener("submit", e => {
+document.getElementById("register-form").addEventListener("submit", e => {
     e.preventDefault();
     const email = document.getElementById("register-email").value;
     const password = document.getElementById("register-password").value;
+
     auth.createUserWithEmailAndPassword(email, password)
-        .then(() => alert("Cont creat cu succes!"))
-        .catch(err => alert(err.message));
+        .then(() => showMessage("register-message", "Cont creat cu succes!"))
+        .catch(err => showMessage("register-message", err.message, "red"));
 });
 
 // Login
-document.getElementById("login-form")?.addEventListener("submit", e => {
+document.getElementById("login-form").addEventListener("submit", e => {
     e.preventDefault();
     const email = document.getElementById("login-email").value;
     const password = document.getElementById("login-password").value;
+
     auth.signInWithEmailAndPassword(email, password)
-        .then(() => window.location.href = "dashboard.html")
-        .catch(err => alert(err.message));
+        .then(() => showMessage("login-message", `Login reușit! Bun venit, ${email}`))
+        .catch(err => showMessage("login-message", err.message, "red"));
 });
 
-// Dashboard
-if (window.location.pathname.includes("dashboard.html")) {
-    auth.onAuthStateChanged(user => {
-        if (!user) {
-            window.location.href = "index.html";
-        } else {
-            document.getElementById("user-email").innerText = user.email;
-            db.collection("users").doc(user.uid).get().then(doc => {
-                if (doc.exists) {
-                    document.getElementById("user-plan").innerText = doc.data().plan || "Niciun plan";
-                }
-            });
-        }
-    });
+// Forgot password
+document.getElementById("forgot-password").addEventListener("click", () => {
+    const email = prompt("Introdu email-ul pentru resetare:");
+    if(email) {
+        auth.sendPasswordResetEmail(email)
+            .then(() => alert("Email de resetare trimis cu succes!"))
+            .catch(err => alert(err.message));
+    }
+});
 
-    document.getElementById("logout-btn").addEventListener("click", () => {
-        auth.signOut().then(() => window.location.href = "index.html");
-    });
-}
-
-// Funcția pentru a lua un plan
+// Activate plan
 function activatePlan(planName) {
     const user = auth.currentUser;
-    if (!user) {
+    if(!user) {
         alert("Trebuie să fii logat pentru a lua planul!");
         return;
     }
-    db.collection("users").doc(user.uid).set({ plan: planName }, { merge: true })
-        .then(() => {
-            alert(`Ai activat planul ${planName}!`);
-            document.getElementById("user-plan").innerText = planName;
-            document.getElementById("server-ip").innerText = "play.mineforest.com";
-            document.getElementById("server-port").innerText = "25565";
-        });
 
+    db.collection("users").doc(user.uid).set({ plan: planName }, { merge: true })
+      .then(() => alert(`Ai activat planul ${planName}!`))
+      .catch(err => alert(err.message));
 }
