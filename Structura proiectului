@@ -1,0 +1,6 @@
+/MinecraftHostingSite
+│
+├─ index.html      → pagina de login/înregistrare
+├─ dashboard.html  → panou utilizator
+├─ style.css
+└─ script.js       → un singur fișier JS pentru tot
