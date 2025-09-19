@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MineForest Hosting 🌲</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Firebase SDK -->
+  <script defer src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
@@ -60,6 +66,14 @@
       <input type="password" id="login-password" placeholder="Parola" required>
       <button type="submit">Login</button>
     </form>
+
+    <button id="forgot-password">Ai uitat parola?</button>
+
+    <div>
+      <p>— sau conectează-te cu —</p>
+      <button id="google-login">🔑 Login cu Google</button>
+      <button id="discord-login">🎮 Login cu Discord</button>
+    </div>
   </section>
 
   <section id="register">
@@ -74,7 +88,5 @@
   <footer>
     <p>&copy; 2025 MineForest Hosting 🌲 – Toate serverele sunt gratuite</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
