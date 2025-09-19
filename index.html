@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -90,3 +91,60 @@
   </footer>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MineForest Hosting 🌲</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .message { margin-top: 10px; }
+    .plan { border: 1px solid #ccc; padding: 10px; margin: 5px; display: inline-block; }
+    button { cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>MineForest Hosting 🌲</h1>
+
+  <section>
+    <h2>Register</h2>
+    <form id="register-form">
+      <input type="email" id="register-email" placeholder="Email" required>
+      <input type="password" id="register-password" placeholder="Parola" required>
+      <button type="submit">Register</button>
+    </form>
+    <p id="register-message" class="message"></p>
+  </section>
+
+  <section>
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="email" id="login-email" placeholder="Email" required>
+      <input type="password" id="login-password" placeholder="Parola" required>
+      <button type="submit">Login</button>
+    </form>
+    <button id="forgot-password">Ai uitat parola?</button>
+    <p id="login-message" class="message"></p>
+  </section>
+
+  <section>
+    <h2>Planuri</h2>
+    <div class="plan">
+      <h3>Starter</h3>
+      <button onclick="activatePlan('Starter 1GB')">Ia-l gratuit</button>
+    </div>
+    <div class="plan">
+      <h3>Advanced</h3>
+      <button onclick="activatePlan('Advanced 10GB')">Ia-l gratuit</button>
+    </div>
+  </section>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+>>>>>>> b0e082ee3292b812d3a22aa6d09a7f1071c9f39a

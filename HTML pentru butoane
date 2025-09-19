@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="plan">
   <div class="plan-icon">🌱</div>
   <h3>Starter</h3>
@@ -10,4 +11,18 @@
   <h3>Advanced</h3>
   <p>10 GB RAM • 50 sloturi</p>
   <button onclick="activatePlan('Advanced 10GB')">Ia-l gratuit</button>
+=======
+<div class="plan">
+  <div class="plan-icon">🌱</div>
+  <h3>Starter</h3>
+  <p>1 GB RAM • 10 sloturi</p>
+  <button onclick="activatePlan('Starter 1GB')">Ia-l gratuit</button>
+</div>
+
+<div class="plan">
+  <div class="plan-icon">🌳</div>
+  <h3>Advanced</h3>
+  <p>10 GB RAM • 50 sloturi</p>
+  <button onclick="activatePlan('Advanced 10GB')">Ia-l gratuit</button>
+>>>>>>> b0e082ee3292b812d3a22aa6d09a7f1071c9f39a
 </div>

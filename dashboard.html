@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -32,4 +33,40 @@
 
   <script src="script.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - MineForest Hosting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🌲 Dashboard - MineForest Hosting 🌲</h1>
+  </header>
+
+  <section>
+    <h2>Bun venit, <span id="user-email"></span></h2>
+    <p>Planul tău activ: <b><span id="user-plan">Niciun plan</span></b></p>
+
+    <div id="server-info">
+      <h2>Serverul tău Minecraft</h2>
+      <p>IP: <span id="server-ip">play.mineforest.com</span></p>
+      <p>Port: <span id="server-port">25565</span></p>
+    </div>
+
+    <h3>Alege un plan</h3>
+    <button onclick="activatePlan('Starter 1GB')">🌱 Starter</button>
+    <button onclick="activatePlan('Advanced 10GB')">🌳 Advanced</button>
+    <button onclick="activatePlan('Ultra 30GB')">🏰 Ultra</button>
+    <button onclick="activatePlan('Mega 90GB')">🌟 Mega</button>
+
+    <button id="logout-btn">Logout</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+>>>>>>> b0e082ee3292b812d3a22aa6d09a7f1071c9f39a
 </html>
